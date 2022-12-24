@@ -1,0 +1,302 @@
+{
+  "welcome": "Добро пожаловать",
+  "open": "Открыть",
+  "search": "Поиск",
+  "yes": "Да",
+  "not": "Нет",
+  "ok": "Ок",
+  "add": "Добавить",
+  "cancel": "Отменить",
+  "delete": "Удалить",
+  "edit": "Редактировать",
+  "save": "Сохранить",
+  "undefined": "Неизвестно",
+  "no-data": "Данных нет",
+  "input": "Вход",
+  "output": "Выход",
+  "alerts": {
+    "error": "Ошибка",
+    "warn": "Предупреждение",
+    "info": "Информация",
+    "success": "Успешно"
+  },
+  "nav": {
+    "index": "Главная",
+    "mezzanine": "Мезонин",
+    "allocation": "Раскладка",
+    "assembly": "Сборка",
+    "sorting": "Сортировка",
+    "shipment": "Отгрузка",
+    "tariffs": "Тарифы",
+    "reference-books": "Справочники",
+    "reports": "Отчеты",
+    "order-pass": "Заказать пропуск",
+    "assign-job": "Назначить работу",
+    "settings": "Настройки"
+  },
+  "components": {
+    "sidebar": {
+      "collapseMenu": "Свернуть меню",
+      "logoutTSD": "Выйти из ТСД"
+    },
+    "table": {
+      "search": "Поиск",
+      "show-all-column": "Отображать всё",
+      "sort-column": "Сортировать",
+      "filter-column": "Фильтровать",
+      "filters": "Фильтры"
+    },
+    "molecules": {
+      "employee": {
+        "card": {
+          "title": "Карточка сотрудника",
+          "active": "Активность",
+          "blocked": "Заблокирован",
+          "created-date": "Дата регистрации",
+          "roles": "Роли",
+          "is-in": "На складе",
+          "last-entered": "Дата последнего входа",
+          "phone": "Телефон",
+          "email": "E-mail",
+          "age": "Возраст",
+          "birthdate": "Дата рождения",
+          "terminal-history": "Детализация входа/выхода",
+          "reset-password-title": "Восстановление пароля",
+          "reset-password": "Восстановить пароль"
+        }
+      }
+    }
+  },
+  "pages": {
+    "auth": {
+      "loginToSystem": "Вход в систему",
+      "scanBadge": "От сканируйте Ваш бейдж<br/> для входа в систему",
+      "inputEidByHand": "Или введите номер вручную",
+      "loginBy": "Или авторизуйтесь с помощью:",
+      "usingPhone": "Телефона",
+      "badgeNumber": "Номер бейджа",
+      "contactSupervisor": "Обратитесь к своему руководителю для восстановления пароля",
+      "signIn": "Войти",
+      "logout": "Выйти",
+      "phoneNumber": "Номер телефона",
+      "phoneCode": "Код",
+      "getCode": "Получить код",
+      "password": "Пароль",
+      "setPassword": "Придумайте пароль",
+      "confirmPassword": "Повторите пароль",
+      "forgotYourPassword": "Забыли пароль?",
+      "minLengthPasswordError": "Пароль должен быть не менее 6 символов",
+      "confirmPasswordError": "Пароли не совпадают",
+      "emptyPasswordError": "Введите пароль",
+      "phoneCodeInfo": "Первый код будет отправлен <br/>в приложение Wildberries, для отправки СМС подождите",
+      "phoneCodeFromPush": "Код из PUSH уведомления",
+      "sendCode": "Отправить SMS"
+    },
+    "reference-books": {
+      "blocks": "Блоки",
+      "blocking-mx": "Блокировка МХ",
+      "gates": "Ворота",
+      "storage-areas": "Зоны хранения",
+      "mx-mezzanine": "МХ Мезонин",
+      "appointment-of-counter": "Назначение конт-ра",
+      "refusals-acceptance": "Отказы на приемке",
+      "warehouses": "Склады",
+      "descent-from-mezzanine": "Спуск с мезонина",
+      "tables": "Столы",
+      "employees": "Сотрудники",
+      "containers": "Тара",
+      "tsd": "ТСД",
+      "columns": {
+        "employees": {
+          "employeeId": "EID",
+          "lastname": "Фамилия",
+          "firstname": "Имя",
+          "middlename": "Отчество",
+          "phone": "Телефон",
+          "sex": "Пол",
+          "birthdate": "Дата рождения",
+          "departmentId": "Идентификатор департамента",
+          "isActive": "Активный"
+        },
+        "blocks": {
+          "whName": "Наименование блока",
+          "officeId": "Офис",
+          "abbreviation": "Аббревиатура",
+          "createdAt": "Дата создания",
+          "employeId": "Пользователь",
+          "isActive": "Активность"
+        },
+        "gates": {
+          "id": "ID",
+          "barcode": "Штрих-код",
+          "blockId": "ID блока",
+          "blockName": "Название блока",
+          "gateNumber": "Номер ворот",
+          "gateTypeName": "Название типа ворот",
+          "gates_type_id": "Идентификатор типа ворот",
+          "goodsIncomeTypes": "Типы товаров",
+          "isActive": "Активен",
+          "isMarketplace": "Торговой площадка",
+          "isTransit": "Транзит",
+          "statusId": "ID статуса",
+          "updatedAt": "Обновлено",
+          "warehouseName": "Название склада"
+        },
+        "warehouses": {
+          "address": "Адрес",
+          "allowKgt": "Разрешить",
+          "boxTypeMask": "Тип коробки Kgt Маска",
+          "boxTypeString": "Тип коробки Строка",
+          "canRequestPass": "Может запрашивать",
+          "checksMask": "Проверки пропусков Маска",
+          "destinationWarehousesString": "Строка складов назначения",
+          "displayName": "Отображаемое имя",
+          "gln": "GLN",
+          "id": "Идентификатор gln",
+          "isActive": "Активен",
+          "isActiveInternal": "Активен Внутренний",
+          "isSortingCenter": "Центр сортировки",
+          "isSupplierWarehouse": "Склад поставщика",
+          "isTransitActive": "Транзит Активное",
+          "name": "Имя",
+          "needInterval": "Требуется интервал",
+          "turnoverString": "Оборота Строка"
+        }
+      }
+    },
+    "settings": {
+      "packages": {
+        "title": "Упаковка",
+        "wb": {
+          "title": "Настройки Вайлдберриз",
+          "package": {
+            "create": "Добавить упаковку",
+            "view": "Карточка упаковки",
+            "edit": "Редактировать упаковку"
+          }
+        },
+        "suppliers": {
+          "title": "Настройки поставщиков",
+          "mode": {
+            "create": "Добавить поставщика",
+            "view": "Карточка поставщика"
+          },
+          "add-package": "Добавить упаковку",
+          "select-supplier": "Выберите поставщика",
+          "add-package-table": "Добавьте упаковку",
+          "supplier": "Поставщик",
+          "create-supplier": {
+            "question": "Добавить поставщика?",
+            "success": "Поставщик добавлен успешно"
+          },
+          "create-package": {
+            "question": "Добавить упаковку поставщику?",
+            "success": "Упаковка добавлена успешно"
+          },
+          "update-package": {
+            "question": "Сохранить упаковку?",
+            "success": "Упаковка изменена успешно"
+          },
+          "delete-supplier": {
+            "question": "Удалить поставщика?"
+          },
+          "delete-package": {
+            "question": "Удалить упаковку у поставщика?"
+          }
+        }
+      },
+      "roles": {
+        "title": "Роли сотрудников",
+        "role": {
+          "create": "Создание роли",
+          "view": "Редактирование роли"
+        }
+      },
+      "incidents-pallet": "Инциденты по перемещению паллет",
+      "incident-pallet": {
+        "title": "Инцидент по перемещению паллет",
+        "entityCreatedAt": "Дата время создания задания",
+        "entityType": "Тип перемещения",
+        "cargoQRcode": "QR TARE",
+        "block": "Блок",
+        "toLocationDescription": "Стол (с которого запросили товар)",
+        "initiatorId": "Пользователь (который запросил товар)",
+        "executorId": "Исполнитель задания",
+        "entityStatus": "Статус на момент создания инцидента",
+        "entityId": "ID задания",
+        "errorReason": "Причина ошибки",
+        "solution": "Решение по инциденту",
+        "comment": "Комментарий",
+        "deliveryTables": "Подвоз товара к столам"
+      },
+      "columns": {
+        "incidents": {
+          "id": "ID",
+          "createdAt": "Дата",
+          "whId": "Блок",
+          "status": "Статус",
+          "priority": "Приоритет",
+          "appName": "Приложение",
+          "appVersion": "Версия приложения",
+          "type": "Описание",
+          "resolverName": "Пользователь",
+          "solution": "Решение"
+        },
+        "packages": {
+          "wb": {
+            "parentName": "Категория товара",
+            "subjects": "Подкатегория товаров",
+            "createdAt": "Последнее изменение",
+            "user": "Пользователь"
+          },
+          "suppliers": {
+            "supplierId": "ID поставщика",
+            "supplierName": "Наименование поставщика",
+            "createdAt": "Последнее изменение",
+            "user": "Пользователь"
+          }
+        },
+        "roles": {
+          "id": "ID",
+          "roleDescription": "Описание роли",
+          "roleName": "Название роли"
+        }
+      },
+      "cells": {
+        "incidents": {
+          "priority": {
+            "high": "Высокий",
+            "medium": "Средний",
+            "low": "Низкий"
+          },
+          "status": {
+            "created": "Новый",
+            "resolved": "Решен",
+            "ignored": "Игнорирование"
+          },
+          "entityStatus": {
+            "created": "Создано новое задание",
+            "selected": "Задание выбрано на ТСД",
+            "assigned": "Исполнитель назначен",
+            "started": "Грузчик отсканировал тару",
+            "failure": "Задание не выполнено",
+            "finished": "Задание выполнено успешно"
+          }
+        }
+      }
+    },
+    "reports": {
+      "acceptance": "Приёмка"
+    },
+    "assign-job": {
+      "title": "Назначить работу",
+      "columns": {
+        "employeeId": "№ Бейджа",
+        "fio": "ФИО сотрудника",
+        "blockName": "Блок",
+        "workName": "Вид работ",
+        "workStartedAt": "Время назначения"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.m-employee-card {
+  @apply pt-4;
+}
+
+/* Left side */
+.m-employee-card__left-side {
+  @apply h-min rounded-lg overflow-hidden;
+}
+
+/* Right side */
+.m-employee-card__right-side {
+}
+
+.m-employee-card__right-side .m-employee-card__header {
+  @apply flex justify-between mb-2;
+}
+
+.m-employee-card .m-employee-card__actions {
+  @apply mt-6 flex gap-4;
+}

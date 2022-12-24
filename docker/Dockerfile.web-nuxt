@@ -1,0 +1,41 @@
+FROM node:16.14.0-alpine as installer
+ARG ALPINE_VER
+
+WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install && \
+    yarn cache clean --all && \
+    rm -rf $(find node_modules -maxdepth 2 | grep -i -E "^.*/readme.md|.*/tests?|.*/licence|.*/changelog.md$")
+
+
+FROM node:16.14.0-alpine as builder
+WORKDIR /app
+COPY . ./
+COPY --from=installer /app/node_modules ./node_modules
+
+# ENVIRONMENTS
+ENV API_BASE_URL localhost-stage.ru
+
+RUN yarn build && \
+    yarn cache clean --all
+
+
+FROM node:16.14.0-alpine
+
+# create user other than root and install updated
+RUN addgroup -g 101 app && \
+    adduser -H -u 101 -G app -s /bin/sh -D app
+
+ENV NODE_ENV production
+ENV HOST 0.0.0.0
+ENV PORT 3000
+
+EXPOSE ${PORT}
+
+WORKDIR /app
+COPY --from=builder --chown=app:app /app ./
+
+# run container as non-root user
+USER app
+
+CMD ["yarn", "preview"]

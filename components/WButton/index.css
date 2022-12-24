@@ -1,0 +1,71 @@
+.w-button {
+  @apply py-2 px-7 rounded-lg transition-colors c1-text-accent-12;
+  @apply bg-btn-pink text-white outline-none;
+  @apply hover:bg-btn-purple relative hover:shadow-down;
+}
+
+.w-button.w-button--rounded-full {
+  @apply rounded-full;
+}
+
+
+/* =========================== */
+
+/* ========= Colors ========= */
+.w-button.w-button--color-orange {
+  @apply bg-btn-orange text-orange;
+}
+
+
+/* =========================== */
+
+/* ========= Variant ========= */
+
+/* Outlined */
+.w-button.w-button--variant-outlined {
+  @apply relative border border-btn-pink bg-white;
+  @apply hover:border-btn-purple text-pink;
+}
+
+/* Icon */
+.w-button.w-button--icon {
+  @apply px-2.5 py-3.5 bg-light-blue bg-none text-black;
+  @apply hover:bg-light-pink;
+}
+
+/* Text */
+.w-button.w-button--variant-text {
+  @apply p-0;
+  @apply border-none bg-transparent text-pink hover:text-btn-purple shadow-none;
+}
+
+/* =========================== */
+
+/* ========= Sizes ========= */
+.w-button.w-button--size-lg {
+  @apply px-8 py-2;
+  @apply text-size-15 leading-20 font-600;
+}
+
+.w-button.w-button--size-xl {
+  @apply px-3 py-2.5;
+  @apply flex items-center min-h-[46px];
+  @apply text-size-15 leading-20 font-600;
+}
+
+/* =========================== */
+
+/* ========= Disabled ========= */
+.w-button.w-button--disabled {
+  @apply bg-btn-light-grey text-grey cursor-not-allowed;
+}
+
+/* Outlined */
+.w-button.w-button--variant-outlined.w-button--disabled {
+  @apply border-btn-light-grey bg-transparent;
+}
+
+/* Text */
+.w-button.w-button--variant-text.w-button--disabled {
+  @apply bg-transparent text-opacity-60 text-grey;
+}

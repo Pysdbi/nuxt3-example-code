@@ -1,0 +1,10 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3L4 3ZM2 21C2 21.5523 2.44772 22 3 22C3.55229 22 4 21.5523 4 21L2 21ZM2 3L2 21L4 21L4 3L2 3Z"
+    fill="currentColor"/>
+  <path
+    d="M22 3C22 2.44772 21.5523 2 21 2C20.4477 2 20 2.44772 20 3L22 3ZM20 21C20 21.5523 20.4477 22 21 22C21.5523 22 22 21.5523 22 21L20 21ZM20 3L20 21L22 21L22 3L20 3Z"
+    fill="currentColor"/>
+  <rect x="6" y="4" width="12" height="6" rx="2" stroke="currentColor" stroke-width="2"/>
+  <rect x="6" y="14" width="12" height="6" rx="2" stroke="currentColor" stroke-width="2"/>
+</svg>

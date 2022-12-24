@@ -1,0 +1,23 @@
+.w-loader {
+  @apply w-8 h-8 animate-spin;
+}
+
+/* =========================== */
+
+/* ========= Sizes ========= */
+
+.w-loader.w-loader--size-xs {
+  @apply w-4 h-4;
+}
+
+.w-loader.w-loader--size-sm {
+  @apply w-6 h-6;
+}
+
+.w-loader.w-loader--size-lg {
+  @apply w-12 h-12;
+}
+
+.w-loader.w-loader--size-xl {
+  @apply w-16 h-16;
+}

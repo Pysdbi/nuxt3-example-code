@@ -1,0 +1,123 @@
+{
+  "welcome": "Welcome",
+  "open": "Open",
+  "search": "Search",
+  "yes": "Yes",
+  "not": "Not",
+  "nav": {
+    "index": "General page",
+    "mezzanine": "Mezzanine",
+    "allocation": "Allocation",
+    "assembly": "Assembly",
+    "sorting": "Sorting",
+    "shipment": "Shipment",
+    "tariffs": "Tariffs",
+    "reference-books": "Reference books",
+    "reports": "Reports",
+    "order-pass": "Order pass",
+    "assign-job": "Assign job",
+    "settings": "Settings"
+  },
+  "components": {
+    "sidebar": {
+      "collapseMenu": "Свернуть меню",
+      "logoutTSD": "Выйти из ТСД"
+    },
+    "table": {
+      "search": "Поиск",
+      "show-all-column": "Отображать всё",
+      "sort-column": "Сортировать",
+      "filter-column": "Фильтровать"
+    }
+  },
+  "pages": {
+    "auth": {
+      "loginToSystem": "Вход в систему",
+      "scanBadge": "От сканируйте Ваш бейдж<br/> для входа в систему",
+      "inputEidByHand": "Или введите номер вручную",
+      "loginBy": "Или авторизуйтесь с помощью:",
+      "usingPhone": "Телефона",
+      "badgeNumber": "Номер бейджа",
+      "contactSupervisor": "Обратитесь к своему руководителю для восстановления пароля",
+      "signIn": "Войти",
+      "logout": "Выйти",
+      "phoneNumber": "Номер телефона",
+      "phoneCode": "Код",
+      "getCode": "Получить код",
+      "password": "Пароль",
+      "setPassword": "Придумайте пароль",
+      "confirmPassword": "Повторите пароль",
+      "forgotYourPassword": "Забыли пароль?",
+      "minLengthPasswordError": "Пароль должен быть не менее 6 символов",
+      "confirmPasswordError": "Пароли не совпадают",
+      "emptyPasswordError": "Введите пароль",
+      "phoneCodeInfo": "Первый код будет отправлен <br/>в приложение Wildberries, для отправки СМС подождите",
+      "phoneCodeFromPush": "Код из PUSH уведомления",
+      "sendCode": "Отправить SMS"
+    },
+    "reference-books": {
+      "blocks": "blocks",
+      "blocking-mx": "Blocking MX",
+      "gates": "Gates",
+      "storage-areas": "Storage areas",
+      "mx-mezzanine": "MX mezzanine",
+      "appointment-of-counter": "Appointment of a contact person",
+      "refusals-acceptance": "Acceptance refusals",
+      "warehouses": "Warehouses",
+      "descent-from-mezzanine": "Descent from the mezzanine",
+      "tables": "Tables",
+      "employees": "Employees",
+      "containers": "Containers",
+      "tsd": "TSD",
+      "columns": {
+        "employees": {
+          "employeeId": "EID",
+          "lastname": "lastname",
+          "firstname": "firstname",
+          "middlename": "middlename",
+          "phone": "phone",
+          "sex": "sex",
+          "birthdate": "birthdate",
+          "departmentId": "department id",
+          "isActive": "is Active"
+        },
+        "gates": {
+          "id": "ID",
+          "barcode": "Штрих-код",
+          "blockId": "ID блока",
+          "blockName": "Название блока",
+          "gateNumber": "Номер ворот",
+          "gateTypeName": "Название типа ворот",
+          "gates_type_id": "Идентификатор типа ворот",
+          "goodsIncomeTypes": "Типы товаров",
+          "isActive": "Активен",
+          "isMarketplace": "Торговой площадка",
+          "isTransit": "Транзит",
+          "statusId": "ID статуса",
+          "updatedAt": "Обновлено",
+          "warehouseName": "Название склада"
+        },
+        "warehouses": {
+          "address": "Адрес",
+          "allowKgt": "Разрешить",
+          "boxTypeMask": "Тип коробки Kgt Маска",
+          "boxTypeString": "Тип коробки Строка",
+          "canRequestPass": "Может запрашивать",
+          "checksMask": "Проверки пропусков Маска",
+          "destinationWarehousesString": "Строка складов назначения",
+          "displayName": "Отображаемое имя",
+          "gln": "GLN",
+          "id": "Идентификатор gln",
+          "isActive": "Активен",
+          "isActiveInternal": "Активен Внутренний",
+          "isSortingCenter": "Центр сортировки",
+          "isSupplierWarehouse": "Склад поставщика",
+          "isTransitActive": "Транзит Активное",
+          "name": "Имя",
+          "needInterval": "Требуется интервал",
+          "turnoverString": "Оборота Строка"
+        }
+      }
+    }
+  }
+}

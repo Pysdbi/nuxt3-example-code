@@ -1,0 +1,132 @@
+.w-text-field {
+  @apply border border-input-stroke-light rounded-lg transition-colors;
+  @apply inline-flex m-px;
+}
+
+.w-text-field input,
+.w-text-field textarea {
+  @apply w-full py-2 px-4 rounded bg-transparent outline-none;
+}
+
+.w-text-field--wrapper {
+  @apply w-full;
+}
+
+/* Focused */
+.w-text-field.w-text-field--focus {
+  @apply border-pink bg-light-pink;
+}
+
+/* Append & Prepend */
+.w-text-field .w-text-field__append,
+.w-text-field .w-text-field__prepend {
+  @apply min-h-fit flex justify-center items-center cursor-pointer select-none;
+}
+
+/* =========================== */
+
+/* ========= Colors ========= */
+
+/* Success */
+.w-text-field.w-text-field--color-error {
+  @apply border-red;
+}
+
+/* Error variant=Outlined */
+.w-text-field.w-text-field--variant-outlined.w-text-field--color-error {
+  @apply border-red;
+}
+
+/* Error Focused */
+.w-text-field.w-text-field--focus.w-text-field--color-error {
+  @apply ring-red;
+}
+
+/* Success */
+.w-text-field.w-text-field--color-success {
+  @apply bg-green border-green;
+}
+
+/* Success variant=Outlined */
+.w-text-field.w-text-field--variant-outlined.w-text-field--color-success {
+  @apply border-green;
+}
+
+/* Error Focused */
+.w-text-field.w-text-field--focus.w-text-field--color-success {
+  @apply ring-green;
+}
+
+/* =========================== */
+
+/* ========= Variant ========= */
+
+.w-text-field.w-text-field--variant-outlined {
+  @apply bg-transparent;
+}
+
+.w-text-field.w-text-field--variant-text {
+  @apply border-transparent bg-transparent;
+}
+
+/* =========================== */
+
+/* ========= Sizes ========= */
+.w-text-field.w-text-field--size-xs {
+  @apply rounded;
+}
+
+.w-text-field.w-text-field--size-sm {
+  @apply rounded;
+}
+
+.w-text-field.w-text-field--size-lg {
+  @apply rounded-xl;
+}
+
+.w-text-field.w-text-field--size-xl {
+  @apply rounded-2xl;
+}
+
+/* =========================== */
+
+/* ========= Disabled ========= */
+.w-text-field.w-text-field--disabled {
+  @apply bg-opacity-60 border-transparent cursor-not-allowed;
+}
+
+.w-text-field.w-text-field--variant-outlined.w-text-field--disabled {
+  @apply border-opacity-60 text-opacity-60;
+}
+
+.w-text-field.w-text-field--variant-text.w-text-field--disabled {
+  @apply text-opacity-60;
+}
+
+/* =========================== */
+
+/* ========= Floating ========= */
+.w-text-field.w-text-field--floating input,
+.w-text-field.w-text-field--floating textarea {
+  @apply py-1.5;
+}
+
+.w-text-field.w-text-field--floating .w-text-field--wrapper {
+  @apply relative w-full;
+}
+
+.w-text-field.w-text-field--floating .w-text-field--wrapper > input {
+  @apply px-3 pt-4 placeholder-transparent;
+}
+
+.w-text-field.w-text-field--floating .w-text-field--wrapper > label {
+  @apply absolute left-0 right-0 top-0 h-full px-3 text-grey text-size-16;
+  @apply flex items-center border border-transparent pointer-events-none;
+  @apply transition-opacity transition-transform origin-top-left;
+}
+
+.w-text-field.w-text-field--floating .w-text-field--wrapper > input:focus ~ label,
+.w-text-field.w-text-field--floating .w-text-field--wrapper > input:not(:placeholder-shown) ~ label {
+  @apply scale-75 -translate-y-[0.3rem] translate-x-[0.15rem];
+  @apply text-size-12;
+}

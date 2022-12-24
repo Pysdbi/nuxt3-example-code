@@ -1,0 +1,4 @@
+.w-popover {
+  @apply mt-2 w-full p-2 min-w-min p-4;
+  @apply bg-white overflow-auto rounded-lg shadow-bg;
+}

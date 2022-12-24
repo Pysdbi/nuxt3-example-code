@@ -1,0 +1,41 @@
+# https://git.wildberries.ru/devops/ci/templates/-/blob/master/README.md
+.template_repo: &repo
+  project: 'devops/ci/templates'
+  ref: &ci_tmpl_vers 'v3.3.1'
+
+variables:
+  # hold pls
+  CI_TMPL_PROJECT_VERSION: *ci_tmpl_vers
+  # ci vars
+  GO_VER: "1.16.5"
+  CI_TMPL_HELM_CHART_NAME: common-deploy
+  CI_TMPL_HELM_CHART_VERSION: 3.2.0
+  # list of services for build & deploy
+  CI_TMPL_HELM_RELEASE_NAMES: "web-nuxt,storybook"
+  CI_TMPL_HELM_RELEASE_NAMESPACE: web-nuxt
+  # list of clusters for deploy
+  # CI_TMPL_KUBE_CLUSTERS_DEV: "k8s.dldevel"
+  CI_TMPL_KUBE_CLUSTERS_STAGE: "k8s.stage-dp"
+  # CI_TMPL_KUBE_CLUSTERS_PROD: "k8s.prod-dp,k8s.prod-dl"
+  CI_TMPL_KUBE_CLUSTERS_PROD: "k8s.prod-dp,k8s.prod-dl"
+
+  CI_TMPL_HELM_ROLLBACK: Auto
+  CI_TMPL_HELM_RELEASE_TIMEOUT: 120
+
+  # if the host gitlab.wildberries.ru then VAULT_JWT_AUTH should be "jwt2"
+  # if the host git.wildberries.ru then VAULT_JWT_AUTH should be "jwt"
+  VAULT_JWT_AUTH: "jwt2"
+
+  # VAULT_JWT_ROLE_K8S_DLDEVEL: k8s_clusters-k8s.dldevel-$CI_TMPL_HELM_RELEASE_NAMESPACE
+  VAULT_JWT_ROLE_K8S_STAGE_DP: k8s_clusters-k8s.stage-dp-$CI_TMPL_HELM_RELEASE_NAMESPACE
+  # VAULT_JWT_ROLE_K8S_DATALINE: k8s_clusters-k8s.dataline-$CI_TMPL_HELM_RELEASE_NAMESPACE
+  # VAULT_JWT_ROLE_K8S_DATAPRO: k8s_clusters-k8s.datapro-$CI_TMPL_HELM_RELEASE_NAMESPACE
+  VAULT_JWT_ROLE_K8S_PROD_DL: k8s_clusters-k8s.prod-dl-$CI_TMPL_HELM_RELEASE_NAMESPACE
+  VAULT_JWT_ROLE_K8S_PROD_DP: k8s_clusters-k8s.prod-dp-$CI_TMPL_HELM_RELEASE_NAMESPACE
+
+#  CI_TMPL_EXTERNAL_CI_PROJECT: web-nuxt/wms-admin/web
+#  CI_TMPL_EXTERNAL_CI_PROJECT_REF: ci
+#  CI_TMPL_EXTERNAL_CI_TARGET: /.external-ci.yaml
+
+include:
+  - { <<: *repo, file: /pipelines/universal.yml }

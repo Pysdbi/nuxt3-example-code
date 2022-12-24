@@ -1,0 +1,59 @@
+# Enviroment (like as cluser name)
+environment: stage
+
+env:
+  VUE_CLI_API_MODE: "development"
+
+## Ingress
+ingress:
+  enabled: true
+  # servicePort such as service port or envoy.YOUR_SEVICE.listenPort
+  servicePort: 3000
+  ##If cluster version >= 1.19  instead of annotations you should use the new ingressClassName: nginx property.
+  ingressClassName: web-nuxt-ingress
+  ## Ingress annotations
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+
+  ## Must be provided if Ingress is enabled
+  hosts:
+    - name: admin-localhost-stage.ru
+      path: /wms-storybook(/|$)(.*)
+      pathType: Prefix
+      # servicePort: 9000
+      # service: fffffrrr
+      tls: false
+
+service:
+  enabled: true
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - port: 3000 # TODO 80
+      targetPort: 6006
+      protocol: TCP
+      name: http
+
+readinessProbe:
+  httpGet:
+    path: "/"
+    port: 6006
+  initialDelaySeconds: 15
+  periodSeconds: 15
+
+livenessProbe:
+  httpGet:
+    path: "/"
+    port: 6006
+  initialDelaySeconds: 15
+  periodSeconds: 15
+
+resources:
+  requests:
+    memory: "500Mi"
+    cpu: "500m"
+  limits:
+    memory: "1Gi"
+    cpu: "1"
+
+

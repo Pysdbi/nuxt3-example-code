@@ -1,0 +1,35 @@
+FROM node:16.18.0-alpine as installer
+
+WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install && \
+    yarn cache clean --all && \
+    rm -rf $(find node_modules -maxdepth 2 | grep -i -E "^.*/readme.md|.*/tests?|.*/licence|.*/changelog.md$")
+
+
+FROM node:17-alpine3.15 as builder
+WORKDIR /app
+COPY . ./
+COPY --from=installer /app/node_modules ./node_modules
+
+RUN yarn build && yarn story:build
+
+
+FROM node:17-alpine3.15
+
+# create user other than root and install updated
+RUN addgroup -g 101 app && \
+    adduser -H -u 101 -G app -s /bin/sh -D app
+
+ENV NODE_ENV production
+ENV HOST 0.0.0.0
+ENV PORT 6006
+
+EXPOSE ${PORT}
+
+WORKDIR /app
+COPY --from=builder --chown=app:app /app ./
+
+USER app
+
+CMD [ "yarn", "story:preview" ]

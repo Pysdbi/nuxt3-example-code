@@ -1,0 +1,16 @@
+version: "3"
+services:
+  front:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.web-nuxt
+    container_name: frontend
+    ports:
+      - "3000:3000"
+  storybook:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.storybook
+    container_name: storybook
+    ports:
+      - "6007:6007"

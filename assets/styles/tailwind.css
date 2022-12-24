@@ -1,0 +1,15 @@
+@tailwind base;
+
+@layer base {
+  html {
+    @apply text-black;
+  }
+}
+
+@tailwind components;
+
+.icon-button {
+  @apply text-grey hover:text-black transition-colors cursor-pointer;
+}
+
+@tailwind utilities;

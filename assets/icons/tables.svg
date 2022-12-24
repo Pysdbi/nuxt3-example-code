@@ -1,0 +1,6 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M20 21C20 21.5523 20.4477 22 21 22C21.5523 22 22 21.5523 22 21H20ZM2 21C2 21.5523 2.44772 22 3 22C3.55228 22 4 21.5523 4 21H2ZM5 4H19V2H5V4ZM20 5V21H22V5H20ZM4 21V5H2V21H4ZM19 4C19.5523 4 20 4.44772 20 5H22C22 3.34315 20.6569 2 19 2V4ZM5 2C3.34315 2 2 3.34315 2 5H4C4 4.44772 4.44772 4 5 4V2Z"
+    fill="currentColor"/>
+  <path d="M3 11L21 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>

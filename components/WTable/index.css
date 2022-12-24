@@ -1,0 +1,78 @@
+.w-table {
+  @apply relative h-full w-full overflow-hidden flex flex-col;
+}
+
+.w-table__top-menu {
+  @apply flex items-center gap-2 mb-4 px-4;
+}
+
+.w-table .table {
+  @apply min-w-full b1-text-med-16 relative;
+}
+
+.w-table .table .tr {
+  @apply w-fit min-w-full flex;
+}
+
+/* Cells */
+.w-table .table .th,
+.w-table .table .td {
+  @apply border-t border-t-light-blue;
+  @apply h-[50px] py-3 px-2 select-none;
+}
+
+.w-table .table .th:first-child,
+.w-table .table .td:first-child {
+  @apply pl-4;
+}
+
+.w-table .table .th:last-child,
+.w-table .table .td:last-child {
+  @apply pr-4 w-full;
+}
+
+.w-table .table .td > div,
+.w-table .table .th > div {
+  @apply whitespace-nowrap overflow-ellipsis overflow-hidden;
+}
+
+/* ========= Header ========= */
+
+.w-table .table .thead {
+  @apply sticky left-0 top-0 bg-white;
+}
+
+.w-table .table .th {
+  @apply relative text-left b2-text-body-accent-14;
+}
+
+.w-table .table .th > div {
+  @apply whitespace-nowrap overflow-ellipsis overflow-hidden;
+}
+
+.w-table .table .th .resizer {
+  @apply absolute right-0 top-0 bottom-0 w-2 cursor-col-resize select-none;
+  @apply transition-colors;
+}
+
+.w-table .table .th .resizer.active {
+  @apply bg-btn-pink;
+}
+
+.w-table .table .th .resizer:hover {
+  @apply bg-btn-pink;
+}
+
+.w-table .table .th:hover > div .resizer {
+  @apply bg-light-pink;
+}
+
+/* ========= Body ========= */
+.w-table .table .tbody {
+  @apply text-grey b2-text-body-reg-14;
+}
+
+.w-table.can-click-row .table .tbody .tr {
+  @apply cursor-pointer;
+  @apply hover:bg-light-blue;
+}

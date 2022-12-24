@@ -1,0 +1,37 @@
+{
+  // https://v3.nuxtjs.org/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "noImplicitThis": false,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "types": [
+      "@pinia/nuxt",
+      "vitest/globals",
+      "lodash-es",
+      "@tanstack/vue-table"
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "#app": [
+        "node_modules/nuxt/dist/app"
+      ],
+      "#imports": [
+        ".nuxt/imports"
+      ]
+    }
+  }
+}

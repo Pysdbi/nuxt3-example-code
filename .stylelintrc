@@ -1,0 +1,52 @@
+{
+  "reportDescriptionlessDisables": true,
+  "reportInvalidScopeDisables": true,
+  "reportNeedlessDisables": true,
+  "ignoreFiles": [
+    "./dist/**/*",
+    "node_modules",
+    "**/*.{js,ts}"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-hudochenkov/order",
+    "stylelint-config-html",
+    "stylelint-config-recommended-vue"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "selector-class-pattern": "^([a-z0-9]+(-[a-z0-9]+)?)+((__)?([a-z0-9]+(-[a-z0-9]+)?)+)((--)?([a-z0-9]+(-[a-z0-9]+)?)+)$",
+    "selector-type-no-unknown": true,
+    "max-nesting-depth": 2,
+    "property-no-unknown": true,
+    "selector-pseudo-element-no-unknown": true,
+    "color-named": "never",
+    "declaration-no-important": true,
+    "color-hex-length": "long",
+    "color-hex-case": "upper",
+    "string-quotes": "single",
+    "color-function-notation": "legacy",
+    "block-closing-brace-newline-after": "always",
+    "shorthand-property-no-redundant-values": null,
+    "max-line-length": 150,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "layer"
+        ]
+      }
+    ],
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "at-variables",
+      "declarations",
+      "at-rules",
+      "rules"
+    ]
+  }
+}

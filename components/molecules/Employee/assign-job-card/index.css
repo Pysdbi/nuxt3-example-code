@@ -1,0 +1,21 @@
+.m-employee-card__items {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.m-employee-card__items .view__item--row {
+  @apply col-span-2 grid grid-cols-2 gap-4;
+}
+
+.m-employee-card__items .view__item--block {
+  @apply bg-light-blue rounded-lg px-4 py-3;
+}
+
+/* Info Item Title */
+.m-employee-card__items .view__item div:first-child {
+  @apply first:c1-text-reg-12 first:text-grey;
+}
+
+/* Info Item Content */
+.m-employee-card__items .view__item div:last-child {
+  @apply b1-text-reg-16;
+}

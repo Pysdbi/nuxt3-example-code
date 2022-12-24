@@ -1,0 +1,13 @@
+.w-link {
+  @apply text-black b2-text-body-reg-14 cursor-pointer transition-colors;
+  @apply underline underline-offset-4 decoration-dashed decoration-black;
+  @apply hover:text-pink;
+}
+
+/* =========================== */
+
+/* ========= Sizes ========= */
+
+/* =========================== */
+
+/* ========= Disabled ========= */

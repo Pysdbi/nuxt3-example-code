@@ -1,0 +1,8 @@
+.w-badge {
+  @apply relative;
+}
+
+.w-badge .badge {
+  @apply absolute -right-1 -top-1 w-2 h-2 rounded-full bg-btn-pink;
+  @apply ring ring-2 ring-white;
+}

@@ -1,0 +1,42 @@
+# Enviroment (like as cluser name)
+environment: prod-dl
+
+replicaCount: 2
+
+env:
+  VUE_CLI_API_MODE: "production"
+  API_BASE_URL: "localhost-prod.ru"
+
+## Ingress
+ingress:
+  enabled: true
+  # servicePort such as service port or envoy.YOUR_SEVICE.listenPort
+  servicePort: 3000
+  ##If cluster version >= 1.19  instead of annotations you should use the new ingressClassName: nginx property.
+  ingressClassName: web-nuxt
+  ## Must be provided if Ingress is enabled
+  hosts:
+    - name: admin-localhost-prod.ru
+      path: /
+      pathType: Prefix
+      # servicePort: 9000
+      # service: fffffrrr
+      tls: false
+
+service:
+  enabled: true
+  type: NodePort
+  externalTrafficPolicy: Local
+  ports:
+    - port: 3000 # TODO 80
+      targetPort: 3000
+      protocol: TCP
+      name: http
+
+resources:
+  requests:
+    memory: "80Mi"
+    cpu: "10m"
+  limits:
+    memory: "200Mi"
+    cpu: "100m"
